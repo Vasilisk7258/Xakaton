@@ -9,7 +9,7 @@ public class BreakingClim : MonoBehaviour
 
     public void Broken()
     {
-        if (isBreaking)
+        if (!isBreaking)
             Debug.LogWarning(string.Format("This object( {0} ) is not breaking", this.gameObject));
         else
             StartCoroutine(_BreakingGameObject());

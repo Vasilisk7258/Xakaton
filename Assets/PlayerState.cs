@@ -7,17 +7,22 @@ public class PlayerState : MonoBehaviour
 {
     [Tooltip("Tomato slap(panel) gameobject")]
     public GameObject _TomatoSlap;
-    private Rigidbody _PlayerRB;
+  
     [SerializeField]
     private int ChangeTime = 5;
     [SerializeField]
     private float ChangeSpeed = 0.5f;
-    private float initialTime = 0;
     public ActionBasedContinuousMoveProvider _ContProv;
+
+    public float forceMagnitude = 1f; 
+    public float stopDuration = 0.2f;
+
+    private Rigidbody rb;
 
     private void Start()
     {
-        _PlayerRB = this.gameObject.GetComponent<Rigidbody>();
+        _ContProv.moveSpeed = 2.5f;
+        rb = GetComponent<Rigidbody>();
         _TomatoSlap.SetActive(false);
     }
     private void OnTriggerEnter(Collider other)
@@ -28,25 +33,23 @@ public class PlayerState : MonoBehaviour
         }
         else if (other.tag == "Zomb")
         {
-            StartCoroutine(_ZombiPush());
+            rb.AddForce(-Vector3.forward * forceMagnitude, ForceMode.Impulse); 
+            Invoke("StopForce", stopDuration);
         }
+    }
+
+    private void StopForce()
+    {
+        rb.velocity = Vector3.zero;
+        rb.angularVelocity = Vector3.zero; 
     }
 
     IEnumerator _ChangeSpeed()
     {
-        initialTime = _ContProv.moveSpeed;
         _ContProv.moveSpeed -= ChangeSpeed;
         _TomatoSlap.SetActive(true);
         yield return new WaitForSeconds(ChangeTime);
         _TomatoSlap.SetActive(false);
-        _ContProv.moveSpeed = initialTime;
+        _ContProv.moveSpeed = 2.5f;
     }
-
-    IEnumerator _ZombiPush()
-    {
-        _PlayerRB.AddForce(-Vector3.forward, ForceMode.Impulse);
-        yield return new WaitForFixedUpdate();
-        _PlayerRB.velocity = Vector3.zero;
-    }
-
 }
