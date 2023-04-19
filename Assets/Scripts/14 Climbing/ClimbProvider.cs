@@ -32,7 +32,6 @@ public class ClimbProvider : MonoBehaviour
     {
         if(_controllerName == "LeftHand Controller")
         {
-            print("1");
             _leftActive = true;
             _rightActive = false;
         }
@@ -50,7 +49,6 @@ public class ClimbProvider : MonoBehaviour
 
         if (_rightActive && _controllerName == "RightHand Controller")
         {
-            print("2");
             _rightActive = false;
             ClimbInActive?.Invoke();
         }
@@ -65,14 +63,12 @@ public class ClimbProvider : MonoBehaviour
     {
         if (_rightActive || _leftActive)
         {
-            print("3");
             Climb();
         }
     }
 
     private void Climb()
     {
-        print("4");
         Vector3 velocity = _leftActive ? velocityLeft.action.ReadValue<Vector3>() : velocityRight.action.ReadValue<Vector3>();
 
         characterController.Move(characterController.transform.rotation * -velocity * Time.fixedDeltaTime);

@@ -192,6 +192,66 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6fa51d46174c9734e9e06de1cbf08e4b, type: 3}
+--- !u!1 &338563602 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2867060916958514923, guid: 6fa51d46174c9734e9e06de1cbf08e4b,
+    type: 3}
+  m_PrefabInstance: {fileID: 338563601}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &338563603 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4727627691370644164, guid: 6fa51d46174c9734e9e06de1cbf08e4b,
+    type: 3}
+  m_PrefabInstance: {fileID: 338563601}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &338563604 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5347115685205070642, guid: 6fa51d46174c9734e9e06de1cbf08e4b,
+    type: 3}
+  m_PrefabInstance: {fileID: 338563601}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &338563605
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 338563602}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9ce791c395e7a2b458db183c48da2d86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isBreaking: 1
+  BreakingTime: 5
+--- !u!114 &338563606
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 338563603}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9ce791c395e7a2b458db183c48da2d86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isBreaking: 1
+  BreakingTime: 5
+--- !u!114 &338563607
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 338563604}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9ce791c395e7a2b458db183c48da2d86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isBreaking: 1
+  BreakingTime: 5
 --- !u!1001 &381075430
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -217,7 +277,7 @@ PrefabInstance:
     - target: {fileID: 3221670870817186740, guid: 6fa51d46174c9734e9e06de1cbf08e4b,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -1.576185
+      value: -0.33
       objectReference: {fileID: 0}
     - target: {fileID: 3221670870817186740, guid: 6fa51d46174c9734e9e06de1cbf08e4b,
         type: 3}
@@ -1055,6 +1115,11 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 3240524871627034548, guid: 0c3962d09c340f747af2bf4d35e30c19,
         type: 3}
+    - target: {fileID: 5729237895082858766, guid: 29e88d672fd420d4e9216e67e16f9a00,
+        type: 3}
+      propertyPath: isBreaking
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8953517334951605007, guid: 29e88d672fd420d4e9216e67e16f9a00,
         type: 3}
       propertyPath: m_Name

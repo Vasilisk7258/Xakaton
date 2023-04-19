@@ -22,8 +22,7 @@ public class XRDirectClimbInteractor : XRDirectInteractor
 
         if(args.interactableObject.transform.gameObject.tag == "Climbable")
         {
-            print("popal");
-            ClimbHandActivated?.Invoke(_controllerName);  
+                ClimbHandActivated?.Invoke(_controllerName);
         }
         
     }
@@ -33,5 +32,4 @@ public class XRDirectClimbInteractor : XRDirectInteractor
 
         ClimbHandDeactivated?.Invoke(_controllerName);
     }
-
 }
