@@ -16,6 +16,7 @@ TagManager:
   - ToSettings
   - SingleLobby
   - MultiPlayer
+  - Trigger_Zombie
   layers:
   - Default
   - TransparentFX

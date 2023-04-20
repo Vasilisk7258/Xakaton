@@ -20,7 +20,7 @@ public class SceneLoader : MonoBehaviour
         else if(this.gameObject.tag == "SingleLobby")
         {
             //Paste single player scene name
-            SceneManager.LoadScene("SinglePlayer");
+            SceneManager.LoadScene("Rabota");
         }
 
         else if(this.gameObject.tag == "MultiPlayer")
